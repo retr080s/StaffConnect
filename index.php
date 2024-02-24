@@ -1,3 +1,6 @@
+<?php 
+include 'includes/pdo.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +30,23 @@
         <h4 class="text-center">Desk</h4>
       </div>
     </a>
-
-    
   </div>
+
+<?php 
+
+$sql = "SELECT * FROM book_patient";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+
+// Fetch results
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Print data
+foreach ($result as $row) {
+  echo "ID: " . $row["id"] . ", Name: " . $row["first_name"] . "<br>";
+}
+?>
+
 
 <style>
 .grid {
