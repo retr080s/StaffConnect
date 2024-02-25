@@ -1,6 +1,4 @@
-<?php 
-include '../includes/pdo.php'
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +9,7 @@ include '../includes/pdo.php'
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Driver | Hospital App</title>
+    <title>Front Desk | Hospital App</title>
 </head>
 <body class="bg-neutral-900">
     
@@ -19,7 +17,7 @@ include '../includes/pdo.php'
   <a href="../index.php">
     <button class="ml-2 p-2 mt-2 rounded-xl bg-red-900/20 text-red-600 hover:bg-red-900/30">Go Back</button>
   </a>
-  <a href="#">
+  <a href="../public/bookedPatients.php">
   <button class="ml-2 p-2 mt-2 rounded-xl bg-green-900/20 text-green-600 hover:bg-green-900/30">Booked Patients</button>
   </a>
 
