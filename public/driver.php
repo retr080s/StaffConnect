@@ -18,6 +18,8 @@
 
   <?php
 
+
+
   // Database connection details
   $host = "localhost";
   $dbname = "hospital-app";
@@ -51,13 +53,14 @@
     echo '</thead>';
     echo '<tbody>';
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo'<tr>';
+            echo"<tr>";
+            echo"<td class='hidden'>" . $id = $row['id'] . "</td>";
             echo"<td class='px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200'>" . $row['name'] . "</td>";
             echo"<td class='px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200'>" . $row['location'] . "</td>";
             echo"<td class='px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200'>" . $row['reason'] . "</td>";
             echo"<td class='px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200'>" . $row['how_many_people'] . "</td>";
-            echo'<td class="px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200"><button class="ml-2 p-2 mt-2 rounded-xl bg-green-900/20 text-green-600 hover:bg-green-900/30">Picked up</button></td>';
-            echo'</tr>';
+            echo"<td class='px-4 py-2 border-b border-gray-200 text-sm font-light text-gray-200'><form action='../includes/pickedUp.php' method='post'><input type='hidden' name='id' value='$id'> <button class='ml-2 p-2 mt-2 rounded-xl bg-green-900/20 text-green-600 hover:bg-green-900/30' type='submit'>Picked Up</button></form></td>";
+            echo"</tr>";
           }      
     echo'</tbody>';
     echo'</table>';

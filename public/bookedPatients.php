@@ -12,7 +12,7 @@
 <body class="bg-neutral-900">
     
   <h1 class="text-3xl text-red-500 text-center">Los Santos Hospital (Booked Patients) </h1>
-  <a href="../index.php">
+  <a href="../public/frontdesk.php">
     <button class="ml-2 p-2 mt-2 rounded-xl bg-red-900/20 text-red-600 hover:bg-red-900/30">Go Back</button>
   </a>
 
